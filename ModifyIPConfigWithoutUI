@@ -1,0 +1,17 @@
+
+
+Tutorial to modify the IP Config of a Linux computer with only the terminal
+
+
+===========================================================================
+
+Go on terminal and open with NANO the following file :
+/etc/network/interfaces
+
+After that, you will have to reboot the networking service : 
+(sudo) /etc/init.d/networking restart
+
+NB : If the reboot fail, check your IP Configuration in the interfaces file.
+Think to check the name of the interface (eth0, wlp3s0, enp2s0, etc.)
+
+Made by Ezio Cangialosi, 2022
