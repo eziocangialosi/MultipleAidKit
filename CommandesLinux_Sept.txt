@@ -1,0 +1,95 @@
+
+
+
+Commandes pour Linux (Debian)
+
+
+
+=======================================================
+Info commandes : >> ecrit resultat ds un ficher à la suite
+> ecrit resultat ds un ficher mais efface le contenu existant
+
+
+
+=======================================================
+1. Droits admin :
+	$ --> utilisateur connecté
+	# --> droits root
+	
+	Pour passer en root :
+	$ su -
+
+	Pour ecrire UNE commande en root :
+	# sudo <commande>
+
+	Pour sortir du mode root :
+	# exit
+	ou Ctrl + D
+
+2. Commandes basiques
+	Changer de repertoire :
+	$ cd <repertoire>
+
+	Aller répertoire parent :
+	$ cd ..
+
+	Créer répertoire :
+	$ mkdir <nom>
+
+	Lister les fichiers :
+	$ ls 
+
+	Editeur de texte : (Demande par fois de passer en root/sudo pour modifier les fichiers)
+	$ nano
+
+	Afficher contenu fichier :
+	$ cat <fichier>
+
+	Afficher manuel d'une commande :
+	$ man <commande>
+
+	Affiche historique des commandes utilisées :
+	$ history
+
+	Afficher interface réseau :
+	$ ip
+	Tips: lecture plus simple, rajouter -c
+
+	Créer fichier :
+	$ touch <fichier>
+
+	Permissions fichier :
+	# chmod xxx
+	4 pour read, 2 pour write, 1 pour execute, 0 pour aucun, possibilité d'additionner
+
+3. Stokage et partitions
+	Liste des supports de stockage et partitions :
+	# fdisk -l
+	Info : -l pour lister
+
+	Afficher emplacement des répertoires sur les partitions :
+	# df -h
+
+	Afficher les UUID des partitions :
+	# blkid
+
+4. Chemain relatif et absolu
+
+5. Gestions des paquets 
+	Telecharger la liste des paquets :
+	# apt update
+	
+	Installer paquet :	
+	# apt install <nom_du_paquet>
+
+	Supprimer paquet :
+	# apt remove <nom_du_paquet>
+
+	Chercher paquet :
+	# dpkg -l <nom_du_paquet>
+
+	Résoudre un problème de dépendances :
+	# aptitude install <nom_du_paquet>
+
+	Installer les mises à jour (MaJ) :
+	# apt upgrade
