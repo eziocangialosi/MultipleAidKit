@@ -73,7 +73,7 @@ Info commandes : >> ecrit resultat ds un ficher à la suite
 	Afficher les UUID des partitions :
 	# blkid
 
-4. Chemain relatif et absolu
+4. Chemin relatif et absolu
 
 5. Gestions des paquets 
 	Telecharger la liste des paquets :
@@ -93,3 +93,12 @@ Info commandes : >> ecrit resultat ds un ficher à la suite
 
 	Installer les mises à jour (MaJ) :
 	# apt upgrade
+	
+6. Compilation de prog avec Makefile :
+	Aller dans le répertoire avec les fichiers source et faire :
+	# make
+	- Si erreur : "clock shew detect" : # touch *
+	  et relancer # make
+	Ensuite si possible, lancer :
+	# make clean
+	pour déplacer l'exécutable et les .o dans un dossier ./bin/
