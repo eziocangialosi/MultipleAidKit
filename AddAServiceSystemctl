@@ -1,0 +1,24 @@
+##########################################
+####    Add a service in systemctl    ####
+##########################################
+
+1- Go to /etc/systemd/system
+2- Create a file : <service name>.service
+3- Edit file with :
+
+  [Unit]
+  Description=<servicedescription>
+  After=network-online.target //if internet is up
+
+  [Service]
+  Type=simple
+  User=<user>
+  Group=<group>
+  ExecStart=<service path>
+  Restart=<restart choice> //choice btw on-failure, always or never
+
+  [Install]
+  WantedBy=multi-user.target
+  
+4- Enable the service with : 
+  sudo systemctl enable <service name>.service
