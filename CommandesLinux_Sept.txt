@@ -57,6 +57,9 @@ Info commandes : >> ecrit resultat ds un ficher à la suite
 
 	Créer fichier :
 	$ touch <fichier>
+	
+	Ping une adresse avec un certain nombre d'itérations :
+	$ ping -c <nbr> <adresse>
 
 	Permissions fichier :
 	# chmod xxx
