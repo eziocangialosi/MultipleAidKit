@@ -37,7 +37,10 @@ Info commandes : >> ecrit resultat ds un ficher à la suite
 	$ mkdir <nom>
 
 	Lister les fichiers :
-	$ ls 
+	$ ls (-a même cachés, -l affichage "long")
+	
+	Créer un lien symbolique (raccourci) :
+	$ ln -s <path> <label>
 
 	Editeur de texte : (Demande par fois de passer en root/sudo pour modifier les fichiers)
 	$ nano
