@@ -1,0 +1,18 @@
+####################################################
+      Configuration of wifi on Raspberry pi
+####################################################
+
+  1- Go to the wpa_supplicant.conf file :
+      - If the OS has already been started : Go to /etc/wpa_supplicant/wpa_supplicant.conf
+      - If the OS is "fresh" : Create this file in the boot folder on the SD card.
+  2- Once you have find/create this file, write the following lines :
+        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+        country=<ISO country code>
+        update_config=1
+
+        network={
+          ssid="<SSID of your Wifi>
+          psk="<Password of your Wifi>
+        }
+NB 1 : <ISO country code> is a code to define your country (FR,GB,DE,US...)
+NB 2 : You can put as many network as you want, the Rpi will try them one by one in this order.
