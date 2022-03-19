@@ -1,0 +1,34 @@
+#############################################################
+        Assign an Static IP Without UI on Linux
+#############################################################
+
+FIRST METHOD :
+
+  1- Go check the file /etc/network/interfaces :
+        - The file should just have a source line : (source /etc/network/interfaces.d/*)
+        - If you see a config for an interface different than "lo" (loopback) then remove it.
+  
+  2- Go to the /etc/dhcpcd.conf and write these lines :
+      interface <interface>
+      static ip_address=<ip>/<mask cidr>
+      static routers=<ip>
+      static domain_name_servers=<ip>
+      
+NB 1 : <inferface> could be fill by for example :eth0, ens33, wlp3s0, enp2s0...
+NB 2 : These work if dhcpcd service is up and enabled.
+NB 3 : On some systems, the dhcp conf file is in /etc/dhcp/dhclient.conf
+
+Tested on Raspberry Pi 4B and R-Pi 1B+
+
+SECOND METHOD (OBSOLETE) :
+  1- Go to /etc/network/interfaces and write these lines :
+      iface <interface> inet static
+      address <ip>
+      netmask <mask>
+      gateway <gateway ip>
+      
+  2- Reboot the networking service :
+      ~# /etc/init.d/networking restart
+      
+NB : If the reboot fail, check the IP config and the interface name.
+  
