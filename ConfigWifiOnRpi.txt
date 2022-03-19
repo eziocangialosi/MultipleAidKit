@@ -16,3 +16,5 @@
         }
 NB 1 : <ISO country code> is a code to define your country (FR,GB,DE,US...)
 NB 2 : You can put as many network as you want, the Rpi will try them one by one in this order.
+
+Created by Ezio Cangialosi, 2022
