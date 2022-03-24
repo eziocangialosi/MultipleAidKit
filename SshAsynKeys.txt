@@ -1,0 +1,25 @@
+####################################################
+        Setting up an Ssh Asyncronious keys
+####################################################
+
+CAUTION README : If you want to change a key for an computer or/and if the password connection is disabled on the host open
+a ssh session BEFORE follow this turorial.
+
+1- Open a terminal and execute this command :
+    ~$ ssh-keygen
+    If you want, add a passphrase.
+2-a) ON LINUX
+    Execute this command :
+    ~$ ssh-copy-id <user>@<host>
+    
+    NB : If the ssh host have its password connection disable follow the Windows method
+  
+   b) ON WINDOWS
+   On the host, open the following file (if don't exist create it) :
+   /home/<user>/.ssh/authorized_key
+   
+   On your computer, go to this file : ~/.ssh/id_rsa.pub and paste it content in the host authorized_key file.
+   
+3- Try to connect on the host
+
+Ezio Cangialosi, 2022
