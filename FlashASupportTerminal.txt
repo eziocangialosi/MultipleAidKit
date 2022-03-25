@@ -1,0 +1,19 @@
+#####################################################
+      How to flash a support with the terminal
+#####################################################
+
+CAUTION READ ME : This tutorial is not totally safe and mastered.
+
+ 1- Open a terminal and write this command with root rights :
+    ~# fdisk -l
+    This will allow you to get the path of your support (ex : /dev/sdb)
+    
+ 2- Always in root terminal write this command :
+    ~# dd bs=4M if=<path to your iso/img file> of=<path of your support> && sync
+    NB : bs=<size> (here it's set to 4Millions of bytes) number of bytes read and write in one time.
+    Example for an usb key: 
+    ~# dd bs=4M if=/home/ezio/kde_neon.iso of=/dev/sdb && sync
+ 
+ 3- Wait for the end of the command and test your support !
+ 
+Ezio Cangialosi, 2022
