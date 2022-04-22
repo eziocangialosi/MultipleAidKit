@@ -1,0 +1,21 @@
+####################################################
+          Deploy SFTPDrive on Windows 1x
+####################################################
+
+1- Copy and install SFTPDrive on the host machine.
+
+2- Create a ssh key with ssh-keygen command (WITHOUT passphrase)
+
+3- Copy the .pub key file on a computer with root access on the server 
+
+4- Open the .pub key file and copy the content to the authorized_key file on the server.
+
+5- Run SFTPDrive on the host, and create the drive.
+
+6- Add the publickey (use the without extension file).
+
+7- If you want, modify the connection path (enter it like on linux)
+
+8- If you want the drive as run like a service, run the services manager, and launch the SFTPDrive V3 service
+
+8- Start the connection !
