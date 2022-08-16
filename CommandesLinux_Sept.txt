@@ -67,6 +67,10 @@ Info commandes : >> ecrit resultat ds un ficher à la suite
 	Permissions fichier :
 	# chmod xxx
 	4 pour read, 2 pour write, 1 pour execute, 0 pour aucun, possibilité d'additionner
+	
+	Liste des ports ouverts sur la machine :
+	$ ss -ruant
+	Tips : 0.0.0.0 --> port LAN, * --> port LAN + WAN
 
 3. Stokage et partitions
 	Liste des supports de stockage et partitions :
