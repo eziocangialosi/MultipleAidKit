@@ -1,0 +1,8 @@
+Commandes usuelles git
+
+Config initial de git :
+	~$ git config --global user.name "<name>"
+	~$ git config --global user.email <email>@<addr>
+
+Enregristrement credentials (a exec dans un dépot):
+	~$ git config credential.helper store
