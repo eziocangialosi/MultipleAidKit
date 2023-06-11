@@ -1,0 +1,4 @@
+While sddm not work with nvidia drivers try to add these line to the /usr/share/sddm/scripts/Xsetup file :
+
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
